@@ -1,0 +1,2 @@
+.empty-state { display: grid; place-items: center; gap: 10px; min-height: 130px; color: var(--fg-dim); }
+.empty-state span { font-size: 2.6rem; opacity: .7; }

@@ -1,0 +1,50 @@
+:host { background: #fffaf0; color: #2b2118; font-family: "Trebuchet MS", system-ui, sans-serif; }
+
+.bar {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 16px 28px;
+  background: #d9531e;
+  color: #fff;
+}
+.brand { font-size: 1.5rem; font-weight: bold; }
+.slogan { font-size: .85rem; opacity: .85; }
+
+.wrap { max-width: 640px; margin: 0 auto; padding: 24px 28px 40px; }
+h1 { margin: 0 0 16px; }
+h2 { margin: 26px 0 8px; color: #d9531e; }
+
+.hero {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 7;
+  font: .85rem monospace;
+  color: #8a7a66;
+  background: repeating-linear-gradient(45deg, #f3e6cf 0 12px, #ecdcc0 12px 24px);
+  border-radius: 12px;
+}
+
+.portions { display: flex; align-items: center; gap: 10px; margin-top: 18px; }
+.portions button {
+  width: 30px;
+  height: 30px;
+  font-size: 1.1rem;
+  color: #fff;
+  background: #d9531e;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.portions button:hover { background: #b84316; }
+
+.ingredients { list-style: none; margin: 0; padding: 0; }
+.ingredients li { padding: 6px 0; border-bottom: 1px dashed #e3d3b8; }
+.amount { display: inline-block; min-width: 90px; font-weight: bold; }
+ol li { margin-bottom: 6px; }
+
+.foot { padding: 18px; text-align: center; font-size: .8rem; color: #8a7a66; }
+a { color: #d9531e; }
+
+.not-found { max-width: 520px; margin: 80px auto; padding: 0 20px; text-align: center; }
+.not-found h1 { font-size: 4rem; }

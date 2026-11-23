@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Gästeliste – Gästebuch Lindenhof</title>
+  <style>
+    .lock { margin-top: 18px; padding: 16px; border: 1px dashed #8a1c1c; border-radius: 10px; }
+    .lock input { padding: 6px 10px; font: inherit; }
+    .lock button { padding: 6px 12px; font: inherit; cursor: pointer; }
+    .result { margin-top: 10px; min-height: 1.4em; color: #8a1c1c; }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <span class="logo">Gästebuch Lindenhof</span>
+    <nav>
+      <a href="index.html">Start</a>
+      <a href="ueber-uns.html">Über uns</a>
+      <a href="raetsel.html">Gästeliste</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Gästeliste</h1>
+    <p>Die Liste ist gesperrt. Gib das Passwort ein, um sie zu sehen.</p>
+
+    <div class="lock">
+      <input id="pw" type="password" placeholder="Passwort">
+      <button id="go">Öffnen</button>
+      <div class="result" id="out"></div>
+    </div>
+
+    <!-- Platzhalter: das Passwort wird hier im Code geprueft, nicht im Text. -->
+  </main>
+
+  <footer>&copy; 2026 Gästebuch Lindenhof &middot; Platzhalter-Seite</footer>
+
+  <script>
+    // Laeuft mit root = Shadow Root der Seite
+    const expected = 'tomate';
+    root.getElementById('go').addEventListener('click', () => {
+      const given = root.getElementById('pw').value.trim().toLowerCase();
+      root.getElementById('out').textContent = given === expected
+        ? 'Zugang gewährt: Gast 1 Igor, Gast 2 Platzhalter, Gast 3 (noch offen).'
+        : 'Falsches Passwort.';
+    });
+  </script>
+</body>
+</html>
